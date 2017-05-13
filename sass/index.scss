@@ -1,0 +1,54 @@
+.index {
+    h1 {
+        margin: 3rem 1rem 3rem 1rem;
+
+        @include fontBioRhyme();
+    }
+
+    .place, .place:visited {
+        display: block;
+
+        text-decoration: none;
+        color: default;
+
+        cursor: pointer;
+
+        .img {
+            width: 90%;
+            height: 400px;
+
+            @include transition(opacity 1s ease);
+        }
+
+        h3 {
+            margin: 1rem 2rem 3rem 2rem;
+
+            color: $black;
+            font: {
+                size: 1.3rem;
+            }
+
+            @include transition(color ease 1s);
+
+            @media all and (min-width: $laptop) {
+                margin-bottom: 5rem;
+            }
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            .img {
+                opacity: .8;
+            }
+
+            h3 {
+                color: $red;
+            }
+        }
+    }
+}

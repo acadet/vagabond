@@ -20,13 +20,10 @@ body {
 }
 
 h1 {
-    margin: 3rem 1rem 3rem 1rem;
-
     color: $black;
     font: {
         size: 3rem;
     }
-    @include fontBioRhyme();
 }
 
 h2 {
@@ -65,54 +62,14 @@ hr {
     }
 }
 
-.place, .place:visited {
-    display: block;
+.img {
+    display: inline-block;
 
-    text-decoration: none;
-    color: default;
-
-    cursor: pointer;
-
-    .img {
-        width: 90%;
-        height: 400px;
-        display: inline-block;
-
-        background: {
-            position: center;
-            size: cover;
-            color: $light-grey;
-        }
-
-        box-shadow: 0 4px 0 -2px $light-grey;
-        @include transition(opacity 1s ease);
+    background: {
+        position: center;
+        size: cover;
+        color: $light-grey;
     }
 
-    h3 {
-        margin: 1rem 2rem 5rem 2rem;
-
-        color: $black;
-        font: {
-            size: 1.3rem;
-        }
-
-        @include transition(color ease 1s);
-
-        &:hover {
-            color: $red;
-        }
-    }
-
-    &:hover {
-
-        text-decoration: none;
-
-        .img {
-            opacity: .8;
-        }
-
-        h3 {
-            color: $red;
-        }
-    }
+    box-shadow: 0 4px 0 -2px $light-grey;
 }

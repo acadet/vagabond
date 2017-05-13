@@ -41,7 +41,8 @@ module.exports = function (grunt) {
                     pretty: true
                 },
                 files: {
-                    'dev/index.html': 'jade/index.jade'
+                    'dev/index.html': 'jade/index.jade',
+                    'dev/hawaii/index.html': 'jade/hawaii.jade'
                 }
             },
             prod: {
