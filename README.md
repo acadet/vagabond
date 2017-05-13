@@ -1,1 +1,3 @@
-# vagabond
+# Vagabond
+
+Explore. Listen. Learn.
