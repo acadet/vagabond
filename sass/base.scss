@@ -1,0 +1,111 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "vars";
+@import "fonts";
+
+a img {
+    border: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    margin: 0;
+    padding: 2rem;
+    @include box-sizing(border-box);
+
+    text-align: center;
+    @include fontLato();
+}
+
+h1 {
+    margin: 3rem 1rem 3rem 1rem;
+
+    color: $black;
+    font: {
+        size: 3rem;
+    }
+    @include fontBioRhyme();
+}
+
+h2 {
+    margin: 1rem;
+
+    color: $grey;
+    font: {
+        size: 1rem;
+    }
+}
+
+hr {
+    width: 90%;
+
+    margin: 3rem auto;
+    border: 1px solid $light-grey;
+
+    @media all and (min-width: $phone) {
+        width: 500px;
+    }
+}
+
+a, a:visited {
+    padding-bottom: 2px;
+    border-bottom: 1px solid $grey;
+
+    color: $grey;
+    text-decoration: none;
+
+    cursor: pointer;
+    @include transition(border-color ease .5s, color ease .5s);
+
+    &:hover {
+        border-color: $red;
+        color: $red;
+    }
+}
+
+.place {
+    cursor: pointer;
+
+    .img {
+        width: 90%;
+        height: 400px;
+        display: inline-block;
+
+        background: {
+            position: center;
+            size: cover;
+            color: $light-grey;
+        }
+
+        box-shadow: 0 4px 0 -2px $light-grey;
+        @include transition(opacity 1s ease);
+    }
+
+    h3 {
+        margin: 1rem 2rem 5rem 2rem;
+
+        color: $black;
+        font: {
+            size: 1.3rem;
+        }
+
+        @include transition(color ease 1s);
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    &:hover {
+
+        .img {
+            opacity: .8;
+        }
+
+        h3 {
+            color: $red;
+        }
+    }
+}

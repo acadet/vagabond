@@ -2,7 +2,8 @@
 .DS_Store
 *~
 
-build
+dev/
+prod/
 
 # IDE
 .idea/

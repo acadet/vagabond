@@ -9,7 +9,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     var coffeeFiles = [
-        'coffee/FIXME.coffee',
+        'coffee/presenter.coffee',
+        'coffee/index_presenter.coffee',
     ];
 
     // Project configuration
@@ -98,7 +99,7 @@ module.exports = function (grunt) {
         },
         concurrent: {
             dist: {
-                tasks: ['watch:coffee', 'watch:sass', 'watch:jade'],
+                tasks: ['watch:coffee:dev', 'watch:sass:dev', 'watch:jade:dev'],
                 options: {
                     logConcurrentOutput: true,
                     limit: 3
@@ -114,7 +115,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grutn.registerTask('default', 'concurrent');
+    grunt.registerTask('default', 'concurrent');
 
     grunt.registerTask('dev', [
         'coffee:dev',
