@@ -9,14 +9,35 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     var coffeeFiles = [
-        'coffee/unit.coffee',
-        'coffee/binder.coffee',
-        'coffee/image_list_widget.coffee',
-        'coffee/presenter.coffee',
-        'coffee/rx_presenter.coffee',
-        'coffee/index_presenter.coffee',
-        'coffee/insight_presenter.coffee'
+        'unit',
+        'binder',
+        'image_list_widget',
+        'presenter',
+        'rx_presenter',
+        'index_presenter',
+        'insight_presenter'
     ];
+
+    for (var i = 0, s = coffeeFiles.length; i < s; i++) {
+        var e = coffeeFiles[i];
+        e = "coffee/" + e + ".coffee";
+        coffeeFiles[i] = e;
+    }
+
+    var places = [
+        'index',
+        'hawaii'
+    ];
+
+    var devFiles = {}, prodFiles = {};
+
+    for (var i = 0, s = places.length; i < s; i++) {
+        var p = places[i];
+        var output = p + ".html";
+        var input = "jade/" + p + ".jade";
+        devFiles["dev/" + output] = input;
+        prodFiles["prod/" + output] = input;
+    }
 
     // Project configuration
     grunt.initConfig({
@@ -45,18 +66,13 @@ module.exports = function (grunt) {
                 options: {
                     pretty: true
                 },
-                files: {
-                    'dev/index.html': 'jade/index.jade',
-                    'dev/hawaii/index.html': 'jade/hawaii.jade'
-                }
+                files: devFiles
             },
             prod: {
                 options: {
                     pretty: true
                 },
-                files: {
-                    'prod/index.html': 'jade/index.jade'
-                }
+                files: prodFiles
             }
         },
         sass: {
