@@ -9,8 +9,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     var coffeeFiles = [
+        'coffee/unit.coffee',
+        'coffee/binder.coffee',
+        'coffee/image_list_widget.coffee',
         'coffee/presenter.coffee',
-        'coffee/index_presenter.coffee',
+        'coffee/rx_presenter.coffee',
+        'coffee/index_presenter.coffee'
     ];
 
     // Project configuration
