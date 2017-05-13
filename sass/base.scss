@@ -67,18 +67,6 @@ hr {
     }
 }
 
-.img {
-    display: inline-block;
-
-    background: {
-        position: center;
-        size: cover;
-        color: $light-grey;
-    }
-
-    box-shadow: 0 4px 0 -2px $light-grey;
-}
-
 footer {
     width: 100%;
     display: inline-block;
@@ -88,7 +76,7 @@ footer {
     background-color: $light-grey;
 
     p {
-        padding: 1rem;
+        padding: 1rem 2rem;
         color: $black;
     }
 }

@@ -9,5 +9,6 @@ mixin insight(place)
         
         .places.js-places
             - for (var i = 1; i <= place.size; i++)
-                .img.js-img(data-src="../imgs/#{place.folder}/#{i}.jpg")
+                a(href='../imgs/#{place.folder}/#{i}.jpg')
+                  img(src="../imgs/#{place.folder}/#{i}.jpg")
         

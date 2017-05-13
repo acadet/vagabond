@@ -15,9 +15,21 @@
 
         .img {
             width: 90%;
-            height: 400px;
+            height: 200px;
+            display: inline-block;
+
+            background: {
+                position: center;
+                size: cover;
+                color: $light-grey;
+            }
+            box-shadow: 0 4px 0 -2px $light-grey;
 
             @include transition(opacity 1s ease);
+
+            @media all and (min-width: $phone) {
+                height: 400px;
+            }
         }
 
         h3 {
