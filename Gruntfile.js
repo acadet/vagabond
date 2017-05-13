@@ -25,7 +25,8 @@ module.exports = function (grunt) {
     }
 
     var places = [
-        { name: 'hawaii', date: '2017' }
+        { name: 'hawaii', date: '2017' },
+        { name: 'tuscon', date: '2017' }
     ];
 
     var devFiles = {}, prodFiles = {};
