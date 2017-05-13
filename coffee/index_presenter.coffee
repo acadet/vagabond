@@ -3,7 +3,7 @@ class IndexPresenter extends Presenter
         super
 
     onCreate:() ->
-        @places = $(".js-places .js-place")
+        @imgs = $(".js-places .js-img")
         @height = $(window).height()
 
         $(window).scroll () => @reveal()
@@ -27,6 +27,6 @@ class IndexPresenter extends Presenter
         e.attr('data-js-was-set', 1)
 
     reveal: () ->
-        @places.each (i, e) =>
+        @imgs.each (i, e) =>
             f = $(e)
             @setContent(f) if @isVisible(f) and !@isContentSet(f)

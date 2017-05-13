@@ -26,19 +26,19 @@ html
             
         hr
             
-        -  var places = [{ name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="}]
-        -  places.push({name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
-        -  places.push({name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
-        -  places.push({name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
-        -  places.push({name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
-        -  places.push({name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
-        -  places.push({name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
-        -  places.push({name: "Hawaii", date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
+        -  var places = [{ name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="}]
+        -  places.push({name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
+        -  places.push({name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
+        -  places.push({name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
+        -  places.push({name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
+        -  places.push({name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
+        -  places.push({name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
+        -  places.push({name: "Hawaii", folder: 'hawaii', date: "Mar 2017", src: "https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg="})
         
         .places.js-places
             each p in places
-                div.place
-                    .img.js-place(data-src="#{p.src}")
+                a.place(href='#{p.folder}')
+                    .img.js-img(data-src="#{p.src}")
                     h3 #{p.name} – #{p.date}
     
     
