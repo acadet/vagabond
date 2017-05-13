@@ -25,7 +25,6 @@ module.exports = function (grunt) {
     }
 
     var places = [
-        'index',
         'hawaii'
     ];
 
@@ -33,11 +32,14 @@ module.exports = function (grunt) {
 
     for (var i = 0, s = places.length; i < s; i++) {
         var p = places[i];
-        var output = p + ".html";
+        var output = p + "/index.html";
         var input = "jade/" + p + ".jade";
         devFiles["dev/" + output] = input;
         prodFiles["prod/" + output] = input;
     }
+
+    devFiles["dev/index.html"] = "jade/index.jade";
+    prodFiles["prod/index.html"] = "jade/index.jade";
 
     // Project configuration
     grunt.initConfig({
