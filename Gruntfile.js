@@ -25,15 +25,15 @@ module.exports = function (grunt) {
     }
 
     var places = [
-        'hawaii'
+        { name: 'hawaii', date: '2017' }
     ];
 
     var devFiles = {}, prodFiles = {};
 
     for (var i = 0, s = places.length; i < s; i++) {
         var p = places[i];
-        var output = p + "/index.html";
-        var input = "jade/" + p + ".jade";
+        var output = p.name + "-" + p.date + "/index.html";
+        var input = "jade/" + p.name + ".jade";
         devFiles["dev/" + output] = input;
         prodFiles["prod/" + output] = input;
     }
