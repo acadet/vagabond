@@ -1,4 +1,4 @@
-mixin header(path)
+mixin header(path, presenter)
     doctype
     html
       head
@@ -16,5 +16,5 @@ mixin header(path)
         script(src= 'https://cdn.jsdelivr.net/g/rxjs@4.1.0(rx.all.compat.js),jquery@3.2.1(jquery.slim.min.js)', type='text/javascript')
         script(src= '#{path}/all.js', type= 'text/javascript')
         script(type= 'text/javascript').
-          var presenter = new IndexPresenter()
+          var presenter = new #{presenter}Presenter()
       body

@@ -14,7 +14,8 @@ module.exports = function (grunt) {
         'coffee/image_list_widget.coffee',
         'coffee/presenter.coffee',
         'coffee/rx_presenter.coffee',
-        'coffee/index_presenter.coffee'
+        'coffee/index_presenter.coffee',
+        'coffee/insight_presenter.coffee'
     ];
 
     // Project configuration
