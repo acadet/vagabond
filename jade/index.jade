@@ -1,21 +1,19 @@
-include pics
-include header
+extends layout
 
-+header('.', 'Index')
+block content
+    +header('.', 'Index')
 
-section.index
-    h1 Vagabond
-    
-    h2 All these images are my property.
-        | Interested in using them? &#8239;
-        a(href='https://github.com/acadet/vagabond/issues') Open a ticket here.
+    section.index
+        h1 Vagabond
         
-    hr
-        
-    .places.js-places
-        each p in places
-            a.place(href='#{p.folder}')
-                .img.js-img(data-src="#{p.src}")
-                h3 #{p.name} – #{p.date}
-    
-include footer
+        h2 All these images are my property.
+            | Interested in using them? &#8239;
+            a(href='https://github.com/acadet/vagabond/issues') Open a ticket here.
+            
+        hr
+            
+        .places.js-places
+            each p in places
+                a.place(href='#{p.folder}')
+                    .img.js-img(data-src="#{p.src}")
+                    h3 #{p.name} – #{p.date}
