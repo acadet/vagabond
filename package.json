@@ -1,0 +1,28 @@
+{
+  "name": "FIXME",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acadet/web-boilerplate.git"
+  },
+  "author": "Adrien Cadet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acadet/web-boilerplate.git"
+  },
+  "homepage": "https://github.com/acadet/web-boilerplate#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
