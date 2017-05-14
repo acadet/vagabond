@@ -32,7 +32,8 @@ module.exports = function (grunt) {
         { name: 'spain-portugal', date: '2016' },
         { name: 'arizona', date: '2015' },
         { name: 'chicago', date: '2015' },
-        { name: 'nyc', date: '2015' }
+        { name: 'nyc', date: '2015' },
+        { name: 'sf', date: '2015' }
     ];
 
     var devFiles = {}, prodFiles = {};
