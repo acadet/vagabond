@@ -9,14 +9,37 @@
       text-align: left;
     }
 
-    img {
-        width: 70%;
-        margin: 1rem 0;
-        max-width: 100%;
-        max-height: 100%;
-        display: inline-block;
+    a.img {
+        display: block;
 
-        background-color: $light-grey;
-        box-shadow: 0 10px 0 -6px $light-grey;
+        img {
+            width: 70%;
+            margin: 1rem 0 0 0;
+            max-width: 100%;
+            max-height: 100%;
+
+            background-color: $light-grey;
+            box-shadow: 0 10px 0 -6px $light-grey;
+        }
+    }
+
+    .description {
+        margin: 1rem;
+
+        a, a:visited {
+            padding-bottom: 3px;
+
+            text-decoration: none;
+            font-size: .9rem;
+
+            color: $grey;
+            border-bottom: 2px solid transparent;
+            @include transition(.5s ease border-color, .5s ease color);
+
+            &:hover {
+                border-color: $red;
+                color: $red;
+            }
+        }
     }
 }

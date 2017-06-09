@@ -1,6 +1,12 @@
 - var places = []
+- function range(s, e, o) { var r = []; for (var i = s; i <= e; i++) { r.push(o); } return r; };
+- function flatten(a) { return [].concat.apply([], a); }
 
 - var BALI = {name: "Bali", folder: 'bali-2017', date: "Apr 2017", size: 29, highlight: 24};
+- var sanur = {name: "Sanur", lat: -8.707178, lng: 115.262624};
+- var uluwatu = {name: "Uluwatu Temple", lat: -8.829099, lng: 115.084877};
+- var ubud = {name: "Ubud", lat: -8.506854, lng: 115.262478};
+- BALI.locations = flatten([range(1, 9, sanur), range(10, 13, uluwatu), range(14, 29, ubud)]);
 -  places.push(BALI)
 
 - var HAWAII = {name: "Hawaii", folder: 'hawaii-2017', date: "Mar 2017", size: 15, highlight: 5};

@@ -11,6 +11,10 @@ mixin insight(place)
         
         .places.js-places
             - for (var i = 1; i <= place.size; i++)
-                a(href='../imgs/#{place.folder}/#{i}.jpg')
+                a.img(href='../imgs/#{place.folder}/#{i}.jpg')
                   img(src="../imgs/#{place.folder}/#{i}.jpg")
+                if place.locations
+                  - var l = place.locations[i - 1]
+                  p.description 
+                    a(href='https://www.google.com/maps/?q=#{l.lat},#{l.lng}') &#9737; #{l.name}
         
