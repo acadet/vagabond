@@ -10,6 +10,12 @@
 -  places.push(BALI)
 
 - var HAWAII = {name: "Hawaii", folder: 'hawaii-2017', date: "Mar 2017", size: 15, highlight: 5};
+- var kona = {name: "Kona", lat: 19.639994, lng: -155.996926};
+- var cook = {name: "Captain Cook", lat: 19.496944, lng: -155.921667};
+- var honaunau = {name: "Pu'uhonua O Honaunau", lat: 19.421539, lng: -155.910525};
+- var hilo = {name: "Hilo", lat: 19.707094, lng: -155.088487};
+- var volcano = {name: "Volcano", lat: 19.419370, lng: -155.288497};
+- HAWAII.locations = flatten([range(1, 3, kona), range(4, 5, cook), range(6, 8, honaunau), range(9, 12, hilo), range(12, 15, volcano)]);
 -  places.push(HAWAII)
 
 - var TUSCON = {name: "Tuscon", folder: 'tuscon-2017', date: "Feb 2017", size: 9, highlight: 9};
