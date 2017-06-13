@@ -51,9 +51,17 @@
 -  places.push(SPAIN)
 
 - var ARIZONA = {name: "Arizona - Utah - Nevada - California", folder: 'arizona-2015', date: "May 2015", size: 16, highlight: 3};
+- var horse = {name: "Horseshoe Bend", lat: 36.879159, lng: -111.510513};
+- var bryce = {name: "Bryce Canyon", lat: 37.593038, lng: -112.187090};
+- var yosemite = {name: "Yosemite", lat: 37.865101, lng: -119.538329};
+- var monument = {name: "Monument Valley", lat: 36.998028, lng: -110.098457};
+- var grand = {name: "Grand Canyon", lat: 36.106965, lng: -112.112997};
+- var death = {name: "Death Valley", lat: 36.505389, lng: -117.079408};
+- ARIZONA.locations = flatten([[horse, bryce, grand, yosemite, grand, bryce, grand, yosemite, bryce, grand, monument, yosemite, bryce, monument], range(15, 16, death)]);
 -  places.push(ARIZONA)
 
 - var CHICAGO = {name: "Chicago", folder: 'chicago-2015', date: "Mar 2015", size: 3, highlight: 3};
+- var CHICAGO.locations = range(1, 1, {name: "Chicago", lat: 41.878114, lng: -87.629798});
 -  places.push(CHICAGO)
 
 - var NYC = {name: "New York City", folder: 'nyc-2015', date: "Mar 2015", size: 5, highlight: 3};
