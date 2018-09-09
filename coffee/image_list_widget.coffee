@@ -14,7 +14,7 @@ class ImageListWidget
 
         @binder.bindAction(
             Rx.Observable
-                .fromEvent($(window), 'scroll')
+                .fromEvent($(window), 'scroll mousewheel')
                 .map(() => Unit.create())
                 .startWith(Unit.create()),
             () => @reveal()
@@ -23,7 +23,7 @@ class ImageListWidget
     onDestroy: () ->
         @binder.detach()
 
-    getScroll: () -> $('body').scrollTop()
+    getScroll: () -> document.documentElement.scrollTop || document.body.scrollTop
 
     isVisible: (e) ->
         extra = @height * .5
