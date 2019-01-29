@@ -2,6 +2,12 @@
 - function range(s, e, o) { var r = []; for (var i = s; i <= e; i++) { r.push(o); } return r; };
 - function flatten(a) { return [].concat.apply([], a); }
 
+- var PALM_SPRINGS = {name: "Palm Springs", folder: 'palm-springs-2019', date: "Jan 2019", size: 19, highlight: 13};
+- var palm_springs = {name: "Palm Springs", lat: 33.7718388, lng: -116.7040344};
+- var joshua = {name: "Joshua Tree National Park", lat: 33.873415, lng: -115.9009923};
+- PALM_SPRINGS.locations = flatten([range(1, 9, palm_springs), range(10, 16, joshua), range(17, 19, palm_springs)]);
+-  places.push(PALM_SPRINGS)
+
 - var MEXICO = {name: "Mexico", folder: 'mexico-2018', date: "Mar 2018", size: 35, highlight: 23};
 - var mexico_city = {name: "Mexico City", lat: 19.432608, lng: -99.133209};
 - var oaxaca = {name: "Oaxaca", lat: 17.060548, lng: -96.731873};
