@@ -12,53 +12,20 @@ body, section, footer {
 }
 
 body {
-    width: 100%;
     height: 100%;
     overflow: auto;
 
-    margin: 0;
     padding: 0;
 
     text-align: center;
-    @include fontLato();
 }
 
 section {
-    padding: 2rem;
+    padding: $two-space;
     @include box-sizing(border-box);
 }
 
-h1 {
-    color: $black;
-    font: {
-        size: 3rem;
-    }
-}
-
-h2 {
-    margin: 1rem;
-
-    color: $grey;
-    font: {
-        size: 1rem;
-    }
-
-
-}
-
-hr {
-    width: 90%;
-
-    margin: 3rem auto;
-    border: 1px solid $light-grey;
-
-    @media all and (min-width: $phone) {
-        width: 500px;
-    }
-}
-
 footer {
-    text-align: center;
     padding: $two-space;
     @include box-sizing(border-box);
 
@@ -82,6 +49,7 @@ footer {
       height: 3px;
       margin: 0 auto $one-space auto;
 
+      border: none;
       background-color: $red;
     }
 
@@ -89,6 +57,7 @@ footer {
       padding: $half-space;
 
       font-size: 1rem;
+      line-height: 1.5rem;
       @include fontBitter();
       color: $black;
 
@@ -100,7 +69,7 @@ footer {
           text-decoration: none;
 
           cursor: pointer;
-          @include transition(border-color ease .3s, color ease .3s);
+          @include transition(border-color $fast-animation, color $fast-animation);
 
           &:hover {
               border-color: $red;
