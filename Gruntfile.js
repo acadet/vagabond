@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.loadNpmTasks('grunt-contrib-coffee');
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
@@ -46,13 +46,13 @@ module.exports = function (grunt) {
     for (var i = 0, s = places.length; i < s; i++) {
         var p = places[i];
         var output = p.name + "-" + p.date + "/index.html";
-        var input = "jade/" + p.name + ".jade";
+        var input = "pug/" + p.name + ".pug";
         devFiles["dev/" + output] = input;
         prodFiles["prod/" + output] = input;
     }
 
-    devFiles["dev/index.html"] = "jade/index.jade";
-    prodFiles["prod/index.html"] = "jade/index.jade";
+    devFiles["dev/index.html"] = "pug/index.pug";
+    prodFiles["prod/index.html"] = "pug/index.pug";
 
     // Project configuration
     grunt.initConfig({
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        jade: {
+        pug: {
             dev: {
                 options: {
                     pretty: true
@@ -117,9 +117,9 @@ module.exports = function (grunt) {
                     atBegin: true
                 }
             },
-            jade: {
-                files: 'jade/**/*.jade',
-                tasks: ['jade'],
+            pug: {
+                files: 'pug/**/*.pug',
+                tasks: ['pug'],
                 options: {
                     interrupt: true,
                     atBegin: true
@@ -136,7 +136,7 @@ module.exports = function (grunt) {
         },
         concurrent: {
             dist: {
-                tasks: ['watch:coffee:dev', 'watch:sass:dev', 'watch:jade:dev'],
+                tasks: ['watch:coffee:dev', 'watch:sass:dev', 'watch:pug:dev'],
                 options: {
                     logConcurrentOutput: true,
                     limit: 3
@@ -156,13 +156,13 @@ module.exports = function (grunt) {
 
     grunt.registerTask('dev', [
         'coffee:dev',
-        'jade:dev',
+        'pug:dev',
         'sass:dev'
     ]);
 
     grunt.registerTask('prod', [
         'coffee:prod',
-        'jade:prod',
+        'pug:prod',
         'sass:prod',
         'uglify'
     ]);

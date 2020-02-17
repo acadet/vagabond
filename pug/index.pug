@@ -10,7 +10,7 @@ block content
   
     section.index.js-places
       each p in places
-          a.entry.js-img(href='#{p.folder}', data-src="imgs/#{p.folder}/#{p.highlight}.jpg")
+          a.entry.js-img(href=p.folder, data-src="imgs/" + p.folder + "/" + p.highlight + ".jpg")
             .titles
               h2 #{p.name}
               hr
