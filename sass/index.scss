@@ -70,7 +70,7 @@ section.index {
 
       &:hover {
           text-decoration: none;
-          box-shadow: 0 10px 0 -5px $light-grey, 0 0 0 10000px transparentize($black, .6) inset;
+          box-shadow: 0 10px 0 -5px $light-grey, 0 0 0 10000px transparentize($black, .5) inset;
       }
   }
 }
