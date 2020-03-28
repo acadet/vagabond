@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         { name: 'bali', date: '2017' },
         { name: 'hawaii', date: '2017' },
         { name: 'tuscon', date: '2017' },
-        // { name: 'dc', date: '2016' },
+        { name: 'dc', date: '2016' },
         // { name: 'seattle', date: '2016' },
         // { name: 'spain-portugal', date: '2016' },
         // { name: 'arizona', date: '2015' },

@@ -247,19 +247,56 @@
       }
     ]
   }
-//- - var TUSCON = {name: "Tuscon", folder: 'tuscon-2017', date: "Feb 2017", size: 9, highlight: 9};
-//- - TUSCON.locations = range(1, 9, {name: "Tuscon", lat: 32.221743, lng: -110.926479});
-//- -  places.push(TUSCON)
-//- 
-//- - var DC = {name: "Washington DC", folder: 'dc-2016', date: "Nov 2016", size: 17, highlight: 11};
-//- - var wdc = {name: "Washington DC", lat: 38.907192, lng: -77.036871};
-//- - var whiteHouse = {name: "White House", lat: 38.897676, lng: -77.036530};
-//- - var lincoln = {name: "Lincoln Memorial", lat: 38.889269, lng: -77.050176};
-//- - var mall = {name: "National Mall", lat: 38.889620, lng: -77.022977};
-//- - var capitol = {name: "Capitol", lat: 38.889947, lng: -77.009053};
-//- - DC.locations = flatten([range(1, 1, whiteHouse), range(2, 2, wdc), range(3, 3, lincoln), range(4, 4, mall), range(5, 5, lincoln), range(6, 13, mall), range(14, 14, capitol), range(15, 17, wdc)]);
-//- -  places.push(DC)
-//- 
+
+-
+  entries["dc"] = {
+    name: "Washington DC",
+    folder: "dc-2016",
+    short_date: "Nov 2016",
+    long_date: "November 2016",
+    highlight: 11,
+    groups: [
+      {
+        name: "White House",
+        pictures: [1]
+      },
+      {
+        name: "Washington DC",
+        pictures: [
+          2,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        name: "Lincoln Memorial",
+        pictures: [
+          3,
+          5
+        ]
+      },
+      {
+        name: "National Mall",
+        pictures: [
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        name: "Capitol",
+        pictures: [14]
+      },
+    ]
+  }
+
 //- - var SEATTLE = {name: "Seattle", folder: 'seattle-2016', date: "Nov 2016", size: 18, highlight: 6};
 //- - var seattle = {name: "Seattle", lat: 47.606209, lng: -122.332071};
 //- - var ridge = {name: "Huricane Ridge", lat: 47.933146, lng: -123.409627};
