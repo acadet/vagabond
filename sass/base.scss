@@ -21,7 +21,7 @@ body {
 }
 
 section {
-    padding: $two-space;
+    padding: $two-space $two-space $four-space $two-space;
     @include box-sizing(border-box);
 }
 

@@ -3,15 +3,28 @@ header.insight {
   height: 100vh;
   @include display(flex);
   @include align-items(stretch);
+  @include flex-direction(column);
 
   border-bottom: 2px solid $light-grey;
 
+  @media all and (min-width: $phone) {
+    @include flex-direction(row);
+
+    .highlight {
+      @include flex(1 !important);
+    }
+
+    .headline {
+      @include flex(1 !important);
+    }
+  }
+
   .highlight, .headline {
-    @include flex(1);
     margin: 0;
   }
 
   .highlight {
+    @include flex(.4);
     background: {
       position: center center;
       color:  $light-grey;
@@ -21,11 +34,12 @@ header.insight {
   }
 
   .headline {
+    @include flex(.6);
     @include display(flex);
 
     .headline-inside-wrapper {
-      margin: $one-space;
       @include align-self(center);
+      margin: $one-space;
       text-align: left;
 
       h1 {
@@ -36,7 +50,7 @@ header.insight {
       }
 
       hr {
-        width: 50%;
+        width: 30vh;
         height: 5px;
         margin: $one-space 0;
 
@@ -57,7 +71,7 @@ header.insight {
 
 section.insight {
   h3 {
-    margin: $three-space $one-space $one-space $one-space;
+    margin: $four-space $one-space $one-space $one-space;
 
     @include fontBitter();
     font-size: 3rem;
@@ -65,7 +79,7 @@ section.insight {
   }
 
   hr {
-    width: 70%;
+    width: 70vh;
     height: 3px;
     margin: 0 auto $one-space auto;
 
@@ -76,7 +90,7 @@ section.insight {
   .full, .combined {
     width: 100%;
     max-width: 1160px;
-    padding: $one-space 0;
+    padding: $two-space 0;
     @include box-sizing(border-box);
   }
 
