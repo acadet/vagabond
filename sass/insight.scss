@@ -90,17 +90,24 @@ section.insight {
   .full, .combined {
     width: 100%;
     max-width: 1160px;
-    padding: $two-space 0;
+    padding: $one-space 0;
     @include box-sizing(border-box);
   }
 
   .combined {
-    @include display(flex);
-    @include align-items(stretch);
-    @include justify-content(space-between);
+    display: inline-block;
 
     img {
-      @include flex(.8);
+      @include box-sizing(border-box);
+      width: 50%;
+
+      &:first-child {
+        padding-right: $one-space;
+      }
+
+      &:last-child {
+        padding-left: $one-space;
+      }
     }
   }
 }

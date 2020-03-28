@@ -16,7 +16,7 @@ mixin insight(entry)
       each picture in group.pictures
         if Array.isArray(picture)
           .combined
-          - for (var k = 0; k < picture.size; k++)
-            img(src="../imgs/" + entry.folder + "/" + picture[k] + ".jpg")
+            each subpic in picture
+              img(src="../imgs/" + entry.folder + "/" + subpic + ".jpg")
         else  
           img.full(src="../imgs/" + entry.folder + "/" + picture + ".jpg")
