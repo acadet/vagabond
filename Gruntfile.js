@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         { name: 'tuscon', date: '2017' },
         { name: 'dc', date: '2016' },
         { name: 'seattle', date: '2016' },
-        // { name: 'spain-portugal', date: '2016' },
+        { name: 'spain-portugal', date: '2016' },
         // { name: 'arizona', date: '2015' },
         // { name: 'chicago', date: '2015' },
         // { name: 'nyc', date: '2015' },
