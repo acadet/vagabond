@@ -1,0 +1,148 @@
+//- - var places = []
+//- - function range(s, e, o) { var r = []; for (var i = s; i <= e; i++) { r.push(o); } return r; };
+//- - function flatten(a) { return [].concat.apply([], a); }
+
+- function range(start, end) { var r = []; for (var i = start; i <= end; i++) { r.push(i); } return r; };
+
+- var entries = {}
+- 
+  entries["palm-springs"] = {
+    name: "Palm Springs",
+    folder: "palm-springs-2019",
+    short_date: "Jan 2019",
+    long_date: "January 2019",
+    highlight: 13,
+    groups: [
+      {
+        name: "Palm Springs",
+        pictures: range(1, 9).concat(range(17, 19))
+      },
+      {
+        name: "Joshua Tree National Park",
+        pictures: range(10, 16)
+      }
+    ]
+  }
+  
+-
+  entries["italy"] = {
+    name: "Italy",
+    folder: "italy-2018",
+    short_date: "Oct 2018",
+    long_date: "October 2018",
+    highlight: 31,
+    groups: [
+      {
+        name: "Pisa",
+        pictures: range(1, 1)
+      },
+      {
+        name: "Cinqua Terre",
+        pictures: range(2, 8)
+      },
+      {
+        name: "Rome",
+        pictures: range(9, 11).concat(range(21, 34))
+      },
+      {
+        name: "Vatican",
+        pictures: range(12, 20).concat(range(35, 37))
+      }
+    ]
+  }
+
+
+//- - var ITALY = {name: "Italy", folder: 'italy-2018', date: "Oct 2018", size: 37, highlight: 31};
+//- - var pisa = {name: "Pisa", lat: 43.7068074, lng: 10.3603586};
+//- - var cinqua_terre = {name: "Cinqua Terre", lat: 44.1238162, lng: 9.6563262};
+//- - var vatican = {name: "Vatican City", lat: 41.9038243, lng: 12.4476838};
+//- - var rome = {name: "Rome", lat: 41.9102415, lng: 12.3959117};
+//- - ITALY.locations = flatten([range(1, 1, pisa), range(2, 8, cinqua_terre), range(9, 11, rome), range(12, 20, vatican), range(21, 34, rome), range(35, 37, vatican)]);
+//- -  places.push(ITALY)
+//- 
+//- - var MEXICO = {name: "Mexico", folder: 'mexico-2018', date: "Mar 2018", size: 35, highlight: 23};
+//- - var mexico_city = {name: "Mexico City", lat: 19.432608, lng: -99.133209};
+//- - var oaxaca = {name: "Oaxaca", lat: 17.060548, lng: -96.731873};
+//- - MEXICO.locations = flatten([range(1, 18, mexico_city), range(19, 35, oaxaca)]);
+//- -  places.push(MEXICO)
+//- 
+//- - var COSTA_RICA = {name: "Costa Rica", folder: 'costa-rica-2017', date: "Dec 2017", size: 17, highlight: 15};
+//- - var liberia = {name: "Liberia", lat: 10.634596, lng: -85.440674};
+//- - var arenal = {name: "Arenal Volcano", lat: 10.461772, lng: -84.712830};
+//- - COSTA_RICA.locations = flatten([range(1, 7, liberia), range(8, 17, arenal)]);
+//- -  places.push(COSTA_RICA)
+//- 
+//- - var BALI = {name: "Bali", folder: 'bali-2017', date: "Apr 2017", size: 29, highlight: 24};
+//- - var sanur = {name: "Sanur", lat: -8.707178, lng: 115.262624};
+//- - var uluwatu = {name: "Uluwatu Temple", lat: -8.829099, lng: 115.084877};
+//- - var ubud = {name: "Ubud", lat: -8.506854, lng: 115.262478};
+//- - BALI.locations = flatten([range(1, 9, sanur), range(10, 13, uluwatu), range(14, 29, ubud)]);
+//- -  places.push(BALI)
+//- 
+//- - var HAWAII = {name: "Hawaii", folder: 'hawaii-2017', date: "Mar 2017", size: 15, highlight: 5};
+//- - var kona = {name: "Kona", lat: 19.639994, lng: -155.996926};
+//- - var cook = {name: "Captain Cook", lat: 19.496944, lng: -155.921667};
+//- - var honaunau = {name: "Pu'uhonua O Honaunau", lat: 19.421539, lng: -155.910525};
+//- - var hilo = {name: "Hilo", lat: 19.707094, lng: -155.088487};
+//- - var volcano = {name: "Volcano", lat: 19.419370, lng: -155.288497};
+//- - HAWAII.locations = flatten([range(1, 3, kona), range(4, 5, cook), range(6, 8, honaunau), range(9, 12, hilo), range(12, 15, volcano)]);
+//- -  places.push(HAWAII)
+//- 
+//- - var TUSCON = {name: "Tuscon", folder: 'tuscon-2017', date: "Feb 2017", size: 9, highlight: 9};
+//- - TUSCON.locations = range(1, 9, {name: "Tuscon", lat: 32.221743, lng: -110.926479});
+//- -  places.push(TUSCON)
+//- 
+//- - var DC = {name: "Washington DC", folder: 'dc-2016', date: "Nov 2016", size: 17, highlight: 11};
+//- - var wdc = {name: "Washington DC", lat: 38.907192, lng: -77.036871};
+//- - var whiteHouse = {name: "White House", lat: 38.897676, lng: -77.036530};
+//- - var lincoln = {name: "Lincoln Memorial", lat: 38.889269, lng: -77.050176};
+//- - var mall = {name: "National Mall", lat: 38.889620, lng: -77.022977};
+//- - var capitol = {name: "Capitol", lat: 38.889947, lng: -77.009053};
+//- - DC.locations = flatten([range(1, 1, whiteHouse), range(2, 2, wdc), range(3, 3, lincoln), range(4, 4, mall), range(5, 5, lincoln), range(6, 13, mall), range(14, 14, capitol), range(15, 17, wdc)]);
+//- -  places.push(DC)
+//- 
+//- - var SEATTLE = {name: "Seattle", folder: 'seattle-2016', date: "Nov 2016", size: 18, highlight: 6};
+//- - var seattle = {name: "Seattle", lat: 47.606209, lng: -122.332071};
+//- - var ridge = {name: "Huricane Ridge", lat: 47.933146, lng: -123.409627};
+//- - SEATTLE.locations = flatten([range(1, 8, seattle), range(9, 18, ridge)]);
+//- -  places.push(SEATTLE)
+//- 
+//- - var SPAIN = {name: "Spain & Portugal", folder: 'spain-portugal-2016', date: "May 2016", size: 23, highlight: 13};
+//- - var bilbao = {name: "Bilbao", lat: 43.263013, lng: -2.934985};
+//- - var picos = {name: "Picos de Europa", lat: 43.187216, lng: -4.821524};
+//- - var cudillero = {name: "Cudillero", lat: 43.560002, lng: -6.148421};
+//- - var douro = {name: "Douro Valley", lat: 41.083621, lng: -7.796087};
+//- - var cascais = {name: "Cascais", lat: 38.696757, lng: -9.420744};
+//- - var cabo = {name: "Cabo da Roca", lat: 38.780417, lng: -9.498885};
+//- - var cordoba = {name: "Cordoba", lat: 37.888175, lng: -4.779383};
+//- - var sevilla = {name: "Sevilla", lat: 37.389092, lng: -5.984459};
+//- - var alcazar = {name: "Real Alcázar de Sevilla", lat: 37.383052, lng: -5.990226};
+//- - SPAIN.locations = flatten([range(1, 1, bilbao), range(2, 5, picos), range(6, 9, cudillero), range(10, 10, douro), range(11, 11, cascais), range(12, 13, cabo), range(14, 17, cordoba), range(18, 18, sevilla), range(19, 23, alcazar)]);
+//- -  places.push(SPAIN)
+//- 
+//- - var ARIZONA = {name: "Arizona - Utah - Nevada - California", folder: 'arizona-2015', date: "May 2015", size: 16, highlight: 3};
+//- - var horse = {name: "Horseshoe Bend", lat: 36.879159, lng: -111.510513};
+//- - var bryce = {name: "Bryce Canyon", lat: 37.593038, lng: -112.187090};
+//- - var yosemite = {name: "Yosemite", lat: 37.865101, lng: -119.538329};
+//- - var monument = {name: "Monument Valley", lat: 36.998028, lng: -110.098457};
+//- - var grand = {name: "Grand Canyon", lat: 36.106965, lng: -112.112997};
+//- - var death = {name: "Death Valley", lat: 36.505389, lng: -117.079408};
+//- - ARIZONA.locations = flatten([[horse, bryce, grand, yosemite, grand, bryce, grand, yosemite, bryce, grand, monument, yosemite, bryce, monument], range(15, 16, death)]);
+//- -  places.push(ARIZONA)
+//- 
+//- - var CHICAGO = {name: "Chicago", folder: 'chicago-2015', date: "Mar 2015", size: 3, highlight: 3};
+//- - CHICAGO.locations = range(1, 3, {name: "Chicago", lat: 41.878114, lng: -87.629798});
+//- -  places.push(CHICAGO)
+//- 
+//- - var NYC = {name: "New York City", folder: 'nyc-2015', date: "Mar 2015", size: 5, highlight: 3};
+//- - var manhattan = {name: "Manhattan", lat: 40.783060, lng: -73.971249};
+//- - var empire = {name: "Empire State Building", lat: 40.748541, lng: -73.985758};
+//- - var chrysler = {name: "Chrysler Building", lat: 40.751621, lng: -73.975502};
+//- - NYC.locations = flatten([range(1, 3, manhattan), [empire, chrysler]]);
+//- -  places.push(NYC)
+//- 
+//- - var SF = {name: "San Francisco", folder: 'sf-2015', date: "Feb 2015", size: 18, highlight: 18};
+//- - var sfCity = {name: "San Francisco", lat: 37.774929, lng: -122.419416};
+//- - var alcatraz = {name: "Alcatraz", lat: 37.826977, lng: -122.422956};
+//- - SF.locations = flatten([range(1, 11, sfCity), range(12, 12, alcatraz), range(13, 18, sfCity)]);
+//- -  places.push(SF)

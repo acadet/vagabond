@@ -9,9 +9,9 @@ block content
     hr.index
   
     section.index.js-places
-      each p in places
-          a.entry.js-img(href=p.folder, data-src="imgs/" + p.folder + "/" + p.highlight + ".jpg")
+      each e in entries
+          a.entry.js-img(href=e.folder, data-src="imgs/" + e.folder + "/" + e.highlight + ".jpg")
             .titles
-              h2 #{p.name}
+              h2 #{e.name}
               hr
-              h3 #{p.date}
+              h3 #{e.short_date}

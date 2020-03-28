@@ -27,18 +27,18 @@ module.exports = function (grunt) {
     var places = [
         { name: 'palm-springs', date: '2019' },
         { name: 'italy', date: '2018' },
-        { name: 'mexico', date: '2018' },
-        { name: 'costa-rica', date: '2017' },
-        { name: 'bali', date: '2017' },
-        { name: 'hawaii', date: '2017' },
-        { name: 'tuscon', date: '2017' },
-        { name: 'dc', date: '2016' },
-        { name: 'seattle', date: '2016' },
-        { name: 'spain-portugal', date: '2016' },
-        { name: 'arizona', date: '2015' },
-        { name: 'chicago', date: '2015' },
-        { name: 'nyc', date: '2015' },
-        { name: 'sf', date: '2015' }
+        // { name: 'mexico', date: '2018' },
+        // { name: 'costa-rica', date: '2017' },
+        // { name: 'bali', date: '2017' },
+        // { name: 'hawaii', date: '2017' },
+        // { name: 'tuscon', date: '2017' },
+        // { name: 'dc', date: '2016' },
+        // { name: 'seattle', date: '2016' },
+        // { name: 'spain-portugal', date: '2016' },
+        // { name: 'arizona', date: '2015' },
+        // { name: 'chicago', date: '2015' },
+        // { name: 'nyc', date: '2015' },
+        // { name: 'sf', date: '2015' }
     ];
 
     var devFiles = {}, prodFiles = {};

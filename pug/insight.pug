@@ -1,20 +1,22 @@
-mixin insight(place)
-    +header('../', 'Insight')
+mixin insight(entry)
+  +header('../', 'Insight')
 
-    section.insight
-        h2.link
-          a(href='../') &#8592; Back Home
-        h1 #{place.name} 
-        h2 #{place.date}
-        
+  header.insight
+    .highlight(style="background-image: url('../imgs/" + entry.folder + "/" + entry.highlight + ".jpg')")
+    .headline
+      .headline-inside-wrapper
+        h1 #{entry.name}
         hr
-        
-        .places.js-places
-            - for (var i = 1; i <= place.size; i++)
-                a.img(href='../imgs/#{place.folder}/#{i}.jpg')
-                  img(src="../imgs/#{place.folder}/#{i}.jpg")
-                if place.locations
-                  - var l = place.locations[i - 1]
-                  p.description 
-                    a(href='https://www.google.com/maps/?q=#{l.lat},#{l.lng}') #{l.name}
-        
+        h2 #{entry.long_date}
+      
+  section.insight.js-places
+    each group in entry.groups
+      h3 #{group.name}
+      hr
+      each picture in group.pictures
+        if Array.isArray(picture)
+          .combined
+          - for (var k = 0; k < picture.size; k++)
+            img(src="../imgs/" + entry.folder + "/" + picture[k] + ".jpg")
+        else  
+          img.full(src="../imgs/" + entry.folder + "/" + picture + ".jpg")
