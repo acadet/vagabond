@@ -90,8 +90,11 @@ section.insight {
   .full, .combined {
     width: 100%;
     max-width: 1160px;
-    padding: $one-space 0;
     @include box-sizing(border-box);
+  }
+
+  .full {
+    padding: $one-space 0;
   }
 
   .combined {
@@ -99,61 +102,27 @@ section.insight {
 
     img {
       @include box-sizing(border-box);
-      width: 50%;
+      width: 100%;
+      padding-top: $one-space;
+      padding-bottom: $one-space;
+    }
 
-      &:first-child {
-        padding-right: $one-space;
-      }
+    @media all and (min-width: $phone) {
+      padding: $one-space 0;
 
-      &:last-child {
-        padding-left: $one-space;
+      img {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 50%;
+
+        &:first-child {
+          padding-right: .75rem;
+        }
+
+        &:last-child {
+          padding-left: .75rem;
+        }
       }
     }
   }
 }
-
-// .insight {
-//     h1 {
-//         margin: 3rem 1rem 1rem 1rem;
-//     }
-//
-//     h2.link {
-//       margin-bottom: 0;
-//
-//       text-align: left;
-//     }
-//
-//     a.img {
-//         display: block;
-//
-//         img {
-//             width: 70%;
-//             margin: 1rem 0 0 0;
-//             max-width: 100%;
-//             max-height: 100%;
-//
-//             background-color: $light-grey;
-//             box-shadow: 0 10px 0 -6px $light-grey;
-//         }
-//     }
-//
-//     .description {
-//         margin: .5rem 1rem 1rem 1rem;
-//
-//         a, a:visited {
-//             padding-bottom: 3px;
-//
-//             text-decoration: none;
-//             font-size: 1rem;
-//
-//             color: $grey;
-//             border-bottom: 2px solid transparent;
-//             @include transition(.5s ease border-color, .5s ease color);
-//
-//             &:hover {
-//                 border-color: $red;
-//                 color: $red;
-//             }
-//         }
-//     }
-// }
