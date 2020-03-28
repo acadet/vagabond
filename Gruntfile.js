@@ -28,7 +28,7 @@ module.exports = function (grunt) {
         { name: 'palm-springs', date: '2019' },
         { name: 'italy', date: '2018' },
         { name: 'mexico', date: '2018' },
-        // { name: 'costa-rica', date: '2017' },
+        { name: 'costa-rica', date: '2017' },
         // { name: 'bali', date: '2017' },
         // { name: 'hawaii', date: '2017' },
         // { name: 'tuscon', date: '2017' },

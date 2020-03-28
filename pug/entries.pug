@@ -150,13 +150,39 @@
     ]
   }
 
-//- 
-//- - var COSTA_RICA = {name: "Costa Rica", folder: 'costa-rica-2017', date: "Dec 2017", size: 17, highlight: 15};
-//- - var liberia = {name: "Liberia", lat: 10.634596, lng: -85.440674};
-//- - var arenal = {name: "Arenal Volcano", lat: 10.461772, lng: -84.712830};
-//- - COSTA_RICA.locations = flatten([range(1, 7, liberia), range(8, 17, arenal)]);
-//- -  places.push(COSTA_RICA)
-//- 
+- 
+  entries["costa-rica"] = {
+    name: "Costa Rica",
+    folder: "costa-rica-2017",
+    short_date: "Dec 2017",
+    long_date: "December 2017",
+    highlight: 15,
+    groups: [
+      {
+        name: "Liberia",
+        pictures: [
+          [2, 3],
+          1,
+          [5, 4],
+          [6, 7]
+        ]
+      },
+      {
+        name: "Volcán Arenal",
+        pictures: [
+          10,
+          [8, 9],
+          11,
+          [12, 13],
+          14,
+          15,
+          16,
+          17
+        ]
+      }
+    ]
+  }
+
 //- - var BALI = {name: "Bali", folder: 'bali-2017', date: "Apr 2017", size: 29, highlight: 24};
 //- - var sanur = {name: "Sanur", lat: -8.707178, lng: 115.262624};
 //- - var uluwatu = {name: "Uluwatu Temple", lat: -8.829099, lng: 115.084877};
