@@ -1,7 +1,3 @@
-//- - var places = []
-//- - function range(s, e, o) { var r = []; for (var i = s; i <= e; i++) { r.push(o); } return r; };
-//- - function flatten(a) { return [].concat.apply([], a); }
-
 - function range(start, end) { var r = []; for (var i = start; i <= end; i++) { r.push(i); } return r; };
 
 - var entries = {}
@@ -205,23 +201,39 @@
       }
     ]
   }
+  
+-
+  entries["hawaii"] = {
+    name: "Hawaii",
+    folder: "hawaii-2017",
+    short_date: "Mar 2017",
+    long_date: "March 2017",
+    highlight: 5,
+    groups: [
+      {
+        name: "Kona",
+        pictures: range(1, 3)
+      },
+      {
+        name: "Captain Cook",
+        pictures: range(4, 5)
+      },
+      {
+        name: "Pu'uhonua O Honaunau",
+        pictures: range(6, 8)
+      },
+      {
+        name: "Hilo",
+        pictures: range(9, 12)
+      },
+      {
+        name: "Volcano",
+        pictures: range(12, 15)
+      }
+    ]
+  }
 
-//- - var BALI = {name: "Bali", folder: 'bali-2017', date: "Apr 2017", size: 29, highlight: 24};
-//- - var sanur = {name: "Sanur", lat: -8.707178, lng: 115.262624};
-//- - var uluwatu = {name: "Uluwatu Temple", lat: -8.829099, lng: 115.084877};
-//- - var ubud = {name: "Ubud", lat: -8.506854, lng: 115.262478};
-//- - BALI.locations = flatten([range(1, 9, sanur), range(10, 13, uluwatu), range(14, 29, ubud)]);
-//- -  places.push(BALI)
-//- 
-//- - var HAWAII = {name: "Hawaii", folder: 'hawaii-2017', date: "Mar 2017", size: 15, highlight: 5};
-//- - var kona = {name: "Kona", lat: 19.639994, lng: -155.996926};
-//- - var cook = {name: "Captain Cook", lat: 19.496944, lng: -155.921667};
-//- - var honaunau = {name: "Pu'uhonua O Honaunau", lat: 19.421539, lng: -155.910525};
-//- - var hilo = {name: "Hilo", lat: 19.707094, lng: -155.088487};
-//- - var volcano = {name: "Volcano", lat: 19.419370, lng: -155.288497};
-//- - HAWAII.locations = flatten([range(1, 3, kona), range(4, 5, cook), range(6, 8, honaunau), range(9, 12, hilo), range(12, 15, volcano)]);
-//- -  places.push(HAWAII)
-//- 
+
 //- - var TUSCON = {name: "Tuscon", folder: 'tuscon-2017', date: "Feb 2017", size: 9, highlight: 9};
 //- - TUSCON.locations = range(1, 9, {name: "Tuscon", lat: 32.221743, lng: -110.926479});
 //- -  places.push(TUSCON)
