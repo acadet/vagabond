@@ -1,45 +1,128 @@
-.insight {
-    h1 {
-        margin: 3rem 1rem 1rem 1rem;
+header.insight {
+  width: 100%;
+  height: 100vh;
+  @include display(flex);
+  @include align-items(stretch);
+  @include flex-direction(column);
+
+  border-bottom: 2px solid $light-grey;
+
+  @media all and (min-width: $phone) {
+    @include flex-direction(row);
+
+    .highlight {
+      @include flex(1 !important);
     }
 
-    h2.link {
-      margin-bottom: 0;
+    .headline {
+      @include flex(1 !important);
+    }
+  }
 
+  .highlight, .headline {
+    margin: 0;
+  }
+
+  .highlight {
+    @include flex(.4);
+    background: {
+      position: center center;
+      color:  $light-grey;
+      repeat: no-repeat;
+      size: cover;
+    }
+  }
+
+  .headline {
+    @include flex(.6);
+    @include display(flex);
+
+    .headline-inside-wrapper {
+      @include align-self(center);
+      margin: $two-space;
       text-align: left;
+
+      h1 {
+        @include fontBitter();
+        font-size: 4rem;
+        color: $black;
+        margin: 0;
+      }
+
+      hr {
+        width: 30vh;
+        height: 5px;
+        margin: $one-space 0;
+
+        background: $red;
+        border: none;
+      }
+
+      h2 {
+        margin: 0;
+
+        @include fontBitter();
+        font-size: 2rem;
+        color: $black;
+      }
+    }
+  }
+}
+
+section.insight {
+  h3 {
+    margin: $four-space $one-space $one-space $one-space;
+
+    @include fontBitter();
+    font-size: 3rem;
+    color: $black;
+  }
+
+  hr {
+    width: 35%;
+    height: 3px;
+    margin: 0 auto $one-space auto;
+
+    background: $red;
+    border: none;
+  }
+
+  .full, .combined {
+    width: 100%;
+    max-width: 70vw;
+    @include box-sizing(border-box);
+  }
+
+  .full {
+    padding: $one-space 0;
+  }
+
+  .combined {
+    display: inline-block;
+
+    img {
+      @include box-sizing(border-box);
+      width: 100%;
+      padding-top: $one-space;
+      padding-bottom: $one-space;
     }
 
-    a.img {
-        display: block;
+    @media all and (min-width: $phone) {
+      padding: $one-space 0;
 
-        img {
-            width: 70%;
-            margin: 1rem 0 0 0;
-            max-width: 100%;
-            max-height: 100%;
+      img {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 50%;
 
-            background-color: $light-grey;
-            box-shadow: 0 10px 0 -6px $light-grey;
+        &:first-child {
+          padding-right: .75rem;
         }
-    }
 
-    .description {
-        margin: .5rem 1rem 1rem 1rem;
-
-        a, a:visited {
-            padding-bottom: 3px;
-
-            text-decoration: none;
-            font-size: 1rem;
-
-            color: $grey;
-            border-bottom: 2px solid transparent;
-            @include transition(.5s ease border-color, .5s ease color);
-
-            &:hover {
-                border-color: $red;
-                color: $red;
-            }
+        &:last-child {
+          padding-left: .75rem;
         }
+      }
     }
+  }
 }

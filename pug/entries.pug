@@ -1,0 +1,456 @@
+- function range(start, end) { var r = []; for (var i = start; i <= end; i++) { r.push(i); } return r; };
+
+- var entries = {}
+- 
+  entries["palm-springs"] = {
+    name: "Palm Springs",
+    folder: "palm-springs-2019",
+    short_date: "Jan 2019",
+    long_date: "January 2019",
+    highlight: 13,
+    groups: [
+      {
+        name: "Palm Springs",
+        pictures: [
+          1,
+          [2, 3],
+          17,
+          [18, 19]
+        ]
+      },
+      {
+        name: "Indian Canyons",
+        pictures: [
+          4,
+          [5, 6],
+          8,
+          9,
+          7
+        ]
+      },
+      {
+        name: "Joshua Tree National Park",
+        pictures: [
+          12,
+          11,
+          [10, 15],
+          13,
+          [16, 14]
+        ]
+      }
+    ]
+  }
+  
+-
+  entries["italy"] = {
+    name: "Italy",
+    folder: "italy-2018",
+    short_date: "Oct 2018",
+    long_date: "October 2018",
+    highlight: 31,
+    groups: [
+      {
+        name: "Pisa",
+        pictures: [1]
+      },
+      {
+        name: "Cinque Terre",
+        pictures: [
+          2,
+          [3, 6],
+          4,
+          7,
+          [5, 8]
+        ]
+      },
+      {
+        name: "Roma",
+        pictures: [
+          [10, 11],
+          9,
+          [12, 13],
+          17,
+          18,
+          [14, 15],
+          19,
+          [16, 20],
+          35,
+          [36, 37],
+          23,
+          [22, 24],
+          [21, 25],
+          31,
+          [29, 30],
+          33,
+          32,
+          [27, 28],
+          34
+        ]
+      },
+      {
+        name: "Vatican",
+        pictures: range(12, 20).concat(range(35, 37))
+      }
+    ]
+  }
+
+-
+  entries["mexico"] = {
+    name: "Mexico",
+    folder: "mexico-2018",
+    short_date: "Mar 2018",
+    long_date: "March 2018",
+    highlight: 23,
+    groups: [
+      {
+        name: "Mexico City",
+        pictures: [
+          10,
+          [8, 11],
+          1,
+          [3, 4],
+          18,
+          9,
+          [2, 5],
+          [6, 7],
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        name: "Teotihuacan Pyramids",
+        pictures: [
+          16,
+          15,
+          17
+        ]
+      },
+      {
+        name: "Oaxaca City",
+        pictures: [
+          21,
+          [19, 20],
+          22,
+          [26, 25],
+          [28, 29],
+          27,
+          [30, 31],
+          24,
+          23,
+          32,
+          [34, 33],
+          35
+        ]
+      }
+    ]
+  }
+
+- 
+  entries["costa-rica"] = {
+    name: "Costa Rica",
+    folder: "costa-rica-2017",
+    short_date: "Dec 2017",
+    long_date: "December 2017",
+    highlight: 15,
+    groups: [
+      {
+        name: "Liberia",
+        pictures: [
+          [2, 3],
+          1,
+          [5, 4],
+          [6, 7]
+        ]
+      },
+      {
+        name: "Volcán Arenal",
+        pictures: [
+          10,
+          [8, 9],
+          11,
+          [12, 13],
+          14,
+          15,
+          16,
+          17
+        ]
+      }
+    ]
+  }
+  
+-
+  entries["bali"] = {
+    name: "Bali",
+    folder: "bali-2017",
+    short_date: "Apr 2017",
+    long_date: "April 2017",
+    highlight: 24,
+    groups: [
+      {
+        name: "Sanur",
+        pictures: range(1, 9)
+      },
+      {
+        name: "Uluwatu Temple",
+        pictures: range(10, 13)
+      },
+      {
+        name: "Ubud",
+        pictures: range(14, 29)
+      }
+    ]
+  }
+  
+-
+  entries["hawaii"] = {
+    name: "Hawaii",
+    folder: "hawaii-2017",
+    short_date: "Mar 2017",
+    long_date: "March 2017",
+    highlight: 5,
+    groups: [
+      {
+        name: "Kona",
+        pictures: range(1, 3)
+      },
+      {
+        name: "Captain Cook",
+        pictures: range(4, 5)
+      },
+      {
+        name: "Pu'uhonua O Honaunau",
+        pictures: range(6, 8)
+      },
+      {
+        name: "Hilo",
+        pictures: range(9, 12)
+      },
+      {
+        name: "Volcano",
+        pictures: range(12, 15)
+      }
+    ]
+  }
+
+-
+  entries["tuscon"] = {
+    name: "Tuscon",
+    folder: "tuscon-2017",
+    short_date: "Feb 2017",
+    long_date: "February 2017",
+    highlight: 9,
+    groups: [
+      {
+        name: "Tuscon",
+        pictures: range(1, 9)
+      }
+    ]
+  }
+
+-
+  entries["dc"] = {
+    name: "Washington DC",
+    folder: "dc-2016",
+    short_date: "Nov 2016",
+    long_date: "November 2016",
+    highlight: 11,
+    groups: [
+      {
+        name: "White House",
+        pictures: [1]
+      },
+      {
+        name: "Washington DC",
+        pictures: [
+          2,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        name: "Lincoln Memorial",
+        pictures: [
+          3,
+          5
+        ]
+      },
+      {
+        name: "National Mall",
+        pictures: [
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        name: "Capitol",
+        pictures: [14]
+      },
+    ]
+  }
+  
+-
+  entries["seattle"] = {
+    name: "Seattle",
+    folder: "seattle-2016",
+    short_date: "Nov 2016",
+    long_date: "November 2016",
+    highlight: 6,
+    groups: [
+      {
+        name: "Seattle",
+        pictures: range(1, 8)
+      },
+      {
+        name: "Hurricane Ridge",
+        pictures: range(9, 18)
+      }
+    ]
+  }
+  
+-
+  entries["spain-portugal"] = {
+    name: "Spain & Portugal",
+    folder: "spain-portugal-2016",
+    short_date: "May 2016",
+    long_date: "May 2016",
+    highlight: 13,
+    groups: [
+      {
+        name: "Bilbao",
+        pictures: [1]
+      },
+      {
+        name: "Picos de Europa",
+        pictures: range(2, 5)
+      },
+      {
+        name: "Cudillero",
+        pictures: range(6, 9)
+      },
+      {
+        name: "Douro Valley",
+        pictures: [10]
+      },
+      {
+        name: "Cascais",
+        pictures: [11]
+      },
+      {
+        name: "Cabo da Roca",
+        pictures: range(12, 13)
+      },
+      {
+        name: "Cordoba",
+        pictures: range(14, 17)
+      },
+      {
+        name: "Sevilla",
+        pictures: [18]
+      },
+      {
+        name: "Real Alcázar de Sevilla",
+        pictures: range(19, 23)
+      }
+    ]
+  }
+
+-
+  entries["arizona"] = {
+    name: "Arizona",
+    folder: "arizona-2015",
+    short_date: "May 2015",
+    long_date: "May 2015",
+    highlight: 3,
+    groups: [
+      {
+        name: "Horseshoe Bend",
+        pictures: [1]
+      },
+      {
+        name: "Monument Valley",
+        pictures: [11, 14]
+      },
+      {
+        name: "Grand Canyon",
+        pictures: [3, 5, 7, 10]
+      },
+      {
+        name: "Bryce Canyon",
+        pictures: [2, 6, 9, 13]
+      },
+      {
+        name: "Death Valley",
+        pictures: [15, 16]
+      },
+      {
+        name: "Yosemite",
+        pictures: [4, 8, 12]
+      },
+    ]
+  }
+
+-
+  entries["chicago"] = {
+    name: "Chicago",
+    folder: "chicago-2015",
+    short_date: "Mar 2015",
+    long_date: "March 2015",
+    highlight: 3,
+    groups: [
+      {
+        name: "Chicago",
+        pictures: range(1, 3)
+      }
+    ]
+  }
+  
+-
+  entries["nyc"] = {
+    name: "New York City",
+    folder: "nyc-2015",
+    short_date: "Mar 2015",
+    long_date: "March 2015",
+    highlight: 3,
+    groups: [
+      {
+        name: "Manhattan",
+        pictures: range(1, 3)
+      },
+      {
+        name: "Empire State Building",
+        pictures: [4]
+      },
+      {
+        name: "Chrysler Building",
+        pictures: [5]
+      },
+    ]
+  }
+  
+-
+  entries["sf"] = {
+    name: "San Francisco",
+    folder: "sf-2015",
+    short_date: "Feb 2015",
+    long_date: "February 2015",
+    highlight: 18,
+    groups: [
+      {
+        name: "San Francisco",
+        pictures: range(1, 11).concat(range(13, 18))
+      },
+      {
+        name: "Alcatraz",
+        pictures: [12]
+      },
+    ]
+  }

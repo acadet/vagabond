@@ -1,66 +1,76 @@
-.index {
-    h1 {
-        margin: 3rem 1rem 3rem 1rem;
+header.index {
+  h1 {
+    padding: $five-space $two-space;
 
-        @include fontBioRhyme();
-    }
+    font-size: 3rem;
+    color: $black;
+    @include fontBioRhyme();
+  }
+}
 
-    .place, .place:visited {
-        display: block;
+hr.index {
+  width: 60%;
+  height: 3px;
+  margin: 0 auto;
 
-        text-decoration: none;
-        color: default;
+  border: none;
+  background-color: $light-grey;
+}
 
-        cursor: pointer;
+section.index {
+  .entry, .entry:visited {
+      width: 90%;
+      max-width: 1200px;
+      height: 325px;
+      @include display(flex);
+      margin: $four-space auto;
 
-        .img {
-            width: 90%;
-            height: 200px;
-            display: inline-block;
+      text-decoration: none;
+      text-align: left;
+      color: default;
+      cursor: pointer;
+      background: {
+          position: center;
+          size: cover;
+          color: $light-grey;
+      }
+      box-shadow: 0 10px 0 -5px $light-grey, 0 0 0 10000px transparentize($black, .8) inset;
+      @include transition(box-shadow $fast-animation);
 
-            background: {
-                position: center;
-                size: cover;
-                color: $light-grey;
-            }
-            box-shadow: 0 4px 0 -2px $light-grey;
+      .titles {
+        @include align-self(flex-end);
+        margin: 0 $one-space $three-space $one-space;
+      }
 
-            @include transition(opacity 1s ease);
+      h2, h3 {
+        padding: $half-space;
+        margin: 0;
 
-            @media all and (min-width: $phone) {
-                height: 400px;
-            }
-        }
+        color: $white;
+        @include fontBitter();
+        font-weight: 400;
+      }
 
-        h3 {
-            margin: 1rem 2rem 3rem 2rem;
+      h2 {
+        font-size: 2rem;
+      }
 
-            color: $black;
-            font: {
-                size: 1.3rem;
-            }
+      h3 {
+        font-size: 1.5rem;
+      }
 
-            @include transition(color ease 1s);
+      hr {
+        width: 100px;
+        height: 3px;
+        margin: $half-space;
 
-            @media all and (min-width: $laptop) {
-                margin-bottom: 5rem;
-            }
+        background-color: $red;
+        border: none;
+      }
 
-            &:hover {
-                color: $red;
-            }
-        }
-
-        &:hover {
-            text-decoration: none;
-
-            .img {
-                opacity: .8;
-            }
-
-            h3 {
-                color: $red;
-            }
-        }
-    }
+      &:hover {
+          text-decoration: none;
+          box-shadow: 0 10px 0 -5px $light-grey, 0 0 0 10000px transparentize($black, .5) inset;
+      }
+  }
 }

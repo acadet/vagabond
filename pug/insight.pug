@@ -1,0 +1,22 @@
+mixin insight(entry)
+  +header('../', 'Insight')
+
+  header.insight
+    .highlight(style="background-image: url('../imgs/" + entry.folder + "/" + entry.highlight + ".jpg')")
+    .headline
+      .headline-inside-wrapper
+        h1 #{entry.name}
+        hr
+        h2 #{entry.long_date}
+      
+  section.insight.js-places
+    each group in entry.groups
+      h3 #{group.name}
+      hr
+      each picture in group.pictures
+        if Array.isArray(picture)
+          .combined
+            each subpic in picture
+              img(src="../imgs/" + entry.folder + "/" + subpic + ".jpg")
+        else  
+          img.full(src="../imgs/" + entry.folder + "/" + picture + ".jpg")

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    +header('.', 'Index')
+
+    header.index
+      h1 Vagabond.
+      
+    hr.index
+  
+    section.index.js-places
+      each e in entries
+          a.entry.js-img(href=e.folder, data-src="imgs/" + e.folder + "/" + e.highlight + ".jpg")
+            .titles
+              h2 #{e.name}
+              hr
+              h3 #{e.short_date}
