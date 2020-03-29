@@ -398,20 +398,59 @@
     ]
   }
 
-//- 
-//- - var CHICAGO = {name: "Chicago", folder: 'chicago-2015', date: "Mar 2015", size: 3, highlight: 3};
-//- - CHICAGO.locations = range(1, 3, {name: "Chicago", lat: 41.878114, lng: -87.629798});
-//- -  places.push(CHICAGO)
-//- 
-//- - var NYC = {name: "New York City", folder: 'nyc-2015', date: "Mar 2015", size: 5, highlight: 3};
-//- - var manhattan = {name: "Manhattan", lat: 40.783060, lng: -73.971249};
-//- - var empire = {name: "Empire State Building", lat: 40.748541, lng: -73.985758};
-//- - var chrysler = {name: "Chrysler Building", lat: 40.751621, lng: -73.975502};
-//- - NYC.locations = flatten([range(1, 3, manhattan), [empire, chrysler]]);
-//- -  places.push(NYC)
-//- 
-//- - var SF = {name: "San Francisco", folder: 'sf-2015', date: "Feb 2015", size: 18, highlight: 18};
-//- - var sfCity = {name: "San Francisco", lat: 37.774929, lng: -122.419416};
-//- - var alcatraz = {name: "Alcatraz", lat: 37.826977, lng: -122.422956};
-//- - SF.locations = flatten([range(1, 11, sfCity), range(12, 12, alcatraz), range(13, 18, sfCity)]);
-//- -  places.push(SF)
+-
+  entries["chicago"] = {
+    name: "Chicago",
+    folder: "chicago-2015",
+    short_date: "Mar 2015",
+    long_date: "March 2015",
+    highlight: 3,
+    groups: [
+      {
+        name: "Chicago",
+        pictures: range(1, 3)
+      }
+    ]
+  }
+  
+-
+  entries["nyc"] = {
+    name: "New York City",
+    folder: "nyc-2015",
+    short_date: "Mar 2015",
+    long_date: "March 2015",
+    highlight: 3,
+    groups: [
+      {
+        name: "Manhattan",
+        pictures: range(1, 3)
+      },
+      {
+        name: "Empire State Building",
+        pictures: [4]
+      },
+      {
+        name: "Chrysler Building",
+        pictures: [5]
+      },
+    ]
+  }
+  
+-
+  entries["sf"] = {
+    name: "San Francisco",
+    folder: "sf-2015",
+    short_date: "Feb 2015",
+    long_date: "February 2015",
+    highlight: 18,
+    groups: [
+      {
+        name: "San Francisco",
+        pictures: range(1, 11).concat(range(13, 18))
+      },
+      {
+        name: "Alcatraz",
+        pictures: [12]
+      },
+    ]
+  }
