@@ -42,11 +42,16 @@ header.insight {
       margin: $two-space;
       text-align: left;
 
-      h1 {
-        @include fontBitter();
-        font-size: 4rem;
-        color: $black;
+      h1, h2 {
         margin: 0;
+
+        @include fontBitter();
+        color: $black;
+        word-break: break-all;
+      }
+
+      h1 {
+        font-size: 4rem;
       }
 
       hr {
@@ -59,11 +64,7 @@ header.insight {
       }
 
       h2 {
-        margin: 0;
-
-        @include fontBitter();
         font-size: 2rem;
-        color: $black;
       }
     }
   }
@@ -76,6 +77,7 @@ section.insight {
     @include fontBitter();
     font-size: 3rem;
     color: $black;
+    word-break: break-all;
   }
 
   hr {
@@ -89,8 +91,11 @@ section.insight {
 
   .full, .combined {
     width: 100%;
-    max-width: 70vw;
     @include box-sizing(border-box);
+
+    @media all and (min-width: $phone) {
+      max-width: 70vw;
+    }
   }
 
   .full {
