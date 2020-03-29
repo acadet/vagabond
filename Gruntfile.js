@@ -25,6 +25,7 @@ module.exports = function (grunt) {
     }
 
     var places = [
+        { name: 'munich', date: '2019' },
         { name: 'berlin', date: '2019' },
         { name: 'nyc-cruise', date: '2019' },
         { name: 'miami', date: '2019' },
